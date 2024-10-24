@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Window</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button type="submit" onclick="openPopup()">Submit</button>
+
+    <div id="popup-box" class="popup-box">
+        <img alt="svgImg" src="./icons8-check.svg"/>
+        <h2>Thank You!</h2>
+        <p>Your details have been successfully submitted. Thanks!</p>
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        let popupBox = document.getElementById("popup-box")
+        
+        function openPopup(){
+            popupBox.classList.add("openPoppup");
+        }
+        
+        function closePopup(){
+            popupBox.classList.remove("openPoppup");
+        }
+    </script>
+</body>
+</html>
